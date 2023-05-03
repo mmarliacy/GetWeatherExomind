@@ -1,0 +1,54 @@
+package com.oc.exomindgetweather.data.database.Dao;
+
+import android.util.Log;
+
+import androidx.room.TypeConverter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Converters {
+
+    //-----------------------------
+    // LIST<STRING> CONVERTER
+    //-----------------------------
+    @TypeConverter
+    public List<String> gettingListFromString(String genreIds) {
+        List<String> list = new ArrayList<>();
+        CharSequence pattern = "[";
+        CharSequence pattern2 = "]";
+        String[] array = genreIds.split(",");
+        if (genreIds.contains(pattern) && genreIds.contains(pattern2)) {
+            for (String s : array) {
+                if (!s.isEmpty()) {
+                    int Position = 0;
+                    s = s.substring(0, Position) + s.substring(Position + 1);
+                    s = s.replaceAll("(^\\[|]$)", "");
+                    list.add(s);
+                    Log.d("The list contains ", "" + s);
+                }
+            }
+        } else {
+            for (String s : array) {
+                if (!s.isEmpty()) {
+                    list.add(s);
+                }
+            }
+        }
+
+        return list;
+    }
+
+    @TypeConverter
+    public String writingStringFromListInt(List<String> list) {
+        StringBuilder genreIds = new StringBuilder();
+        if (list != null) {
+            for (String i : list) {
+                genreIds.append(",").append(i);
+            }
+        }else {
+            genreIds = new StringBuilder();
+        }
+        return genreIds.toString();
+    }
+}

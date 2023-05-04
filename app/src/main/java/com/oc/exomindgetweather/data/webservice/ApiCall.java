@@ -1,6 +1,8 @@
 package com.oc.exomindgetweather.data.webservice;
 
-import com.oc.exomindgetweather.model.weather_info.CurrentWeather;
+import com.oc.exomindgetweather.model.CurrentWeather;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -9,11 +11,6 @@ import retrofit2.http.Query;
 public interface ApiCall {
 
     //https://api.openweathermap.org/{lat}&lon={lon}&appid={API key}
-    @GET
-    Call<CurrentWeather> getWeatherForCity(
-            @Query("lat") Double latitude,
-            @Query("lon") Double longitude,
-            @Query("units") String units,
-            @Query("appid") String apiKey
-    );
+    @GET("data/2.5/weather?")
+    Call<CurrentWeather> getWeatherForCity(@Query ("q") String city, @Query ("appid") String api );
 }

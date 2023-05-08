@@ -8,6 +8,7 @@ public class RetrofitClient {
     private static Retrofit retrofit = null;
     public static final String base_URL = "https://api.openweathermap.org/";
 
+    // -- RETROFIT :: UNIQUE INSTANCE -->
     public static Retrofit getRetrofitClient(){
         if(retrofit == null) {
             retrofit = new Retrofit.Builder()

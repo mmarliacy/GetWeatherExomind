@@ -2,12 +2,9 @@ package com.oc.exomindgetweather.data.factory;
 
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
-
 import com.oc.exomindgetweather.data.repositories.WeatherRepository;
 import com.oc.exomindgetweather.viewmodel.WeatherViewModel;
-
 import org.jetbrains.annotations.NotNull;
-
 import java.util.concurrent.Executor;
 
 public class WeatherFactory implements ViewModelProvider.Factory{

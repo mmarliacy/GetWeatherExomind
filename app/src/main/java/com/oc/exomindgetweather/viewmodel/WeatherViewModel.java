@@ -1,20 +1,15 @@
 package com.oc.exomindgetweather.viewmodel;
 
 import android.app.Activity;
-import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-
 import com.oc.exomindgetweather.data.repositories.WeatherRepository;
 import com.oc.exomindgetweather.model.CurrentWeather;
-
 import java.util.List;
 import java.util.concurrent.Executor;
 
@@ -28,9 +23,7 @@ public class WeatherViewModel extends ViewModel {
     private LiveData<List<CurrentWeather>> cityWeatherList;
 
 
-    /**
-     * CONSTRUCTOR
-     */
+    /** CONSTRUCTOR */
     public WeatherViewModel(WeatherRepository pWeatherRepository, Executor pExecutor) {
         this.fWeatherRepository = pWeatherRepository;
         this.executor = pExecutor;
@@ -55,9 +48,7 @@ public class WeatherViewModel extends ViewModel {
     }
 
     // 6 -- GET PROGRESS BAR -->
-    public void makeProgressBarOn(ProgressBar pProgressBar, TextView percentIndicator, FragmentActivity pActivity, View loadingView, Fragment pFragment, int fragContainer,ConstraintLayout progressContainer, ConstraintLayout mainDisplayView, ConstraintLayout restartContainer){
-        executor.execute(() -> fWeatherRepository.turnOnProgressBar(pProgressBar, percentIndicator, pActivity, loadingView, pFragment, fragContainer,progressContainer, mainDisplayView, restartContainer));
+    public void makeProgressBarOn(ProgressBar pProgressBar, TextView percentIndicator, FragmentActivity pActivity, ViewGroup mainView, Fragment pFragment, int fragmentContainer){
+        executor.execute(() -> fWeatherRepository.turnOnProgressBar(pProgressBar, percentIndicator, pActivity, mainView, pFragment, fragmentContainer));
     }
-
-
 }

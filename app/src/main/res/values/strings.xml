@@ -1,17 +1,22 @@
 <resources>
-    <string name="app_name">GetWeather</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="api_key">c3417629ccff8bb3ba9879faeb62c749</string>
-    <string name="home_menu_title">Let\'s Get Weather</string>
-    <string name="go_btn">Go !</string>
-    <string name="weather_icon">Weather Icon</string>
+    <!--:: Text Views / Titles / Not Editable ::-->
     <string name="indicator">Indicator</string>
-    <string name="restart_btn">Restart</string>
     <string name="city_name">City Name</string>
     <string name="temperature">Temperature</string>
-    <string name="weather_picture">Weather picture</string>
-    
+    <string name="app_name" translatable="false">GetWeather</string>
+    <string name="home_menu_title">Let\'s Get Weather</string>
+    <string name="percent_number">Percent</string>
+
+    <!--:: Button ::-->
+    <string name="restart_btn">Restart</string>
+    <string name="go_btn">Go !</string>
+
+    <!--:: Content Descriptions / Image Views ::-->
+    <string name="weather_picture" translatable="false">Weather picture</string>
+    <string name="weather_icon" translatable="false">Weather Icon</string>
+    <string name="back_to_main_menu" translatable="false">Back to main menu</string>
+
+    <!--:: City List ::-->
     <string-array name="city_list">
         <item>Rennes</item>
         <item>Paris</item>
@@ -20,9 +25,10 @@
         <item>Lyon</item>
     </string-array>
 
+    <!--:: Messages List ::-->
     <string-array name="messages">
-        <item>Nous téléchargeons les données</item>
-        <item>C\'est presque fini...</item>
-        <item>Plus que quelques secondes avant d\'avoir le résultat...</item>
+        <item>We are downloading data</item>
+        <item>It\'s almost done…</item>
+        <item>More than a few seconds before having the result…</item>
     </string-array>
 </resources>

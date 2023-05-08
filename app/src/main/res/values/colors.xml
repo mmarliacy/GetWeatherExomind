@@ -2,6 +2,9 @@
 <resources>
     <!--:: App colors ::-->
     <color name="blue_sky">#6699FF</color>
+    <color name="clear_blue">#B3C8F1</color>
+    <color name="dark_blue">#033AA8</color>
+    <color name="green">#B4EA75</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 

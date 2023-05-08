@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--:: Text Views / Titles / Not Editable ::-->
+    <string name="app_name">GetWeather</string>
+    <string name="home_menu_title">Obtenir la météo</string>
+    <string name="indicator">Indicateur</string>
+    <string name="city_name">Nom de la ville</string>
+    <string name="temperature">Température</string>
+    <string name="percent_number">Pourcentage</string>
+
+    <!--:: Button ::-->
+    <string name="restart_btn">Recommencer</string>
+    <string name="go_btn">Allons-y !</string>
+
+
+    <!--:: City List ::-->
+    <string-array name="city_list">
+        <item>Rennes</item>
+        <item>Paris</item>
+        <item>Nantes</item>
+        <item>Bordeaux</item>
+        <item>Lyon</item>
+    </string-array>
+
+    <!--:: Messages List ::-->
+    <string-array name="messages">
+        <item>Nous téléchargeons les données</item>
+        <item>C\'est presque fini…</item>
+        <item>Plus que quelques secondes avant d\'avoir le résultat…</item>
+    </string-array>
+</resources>

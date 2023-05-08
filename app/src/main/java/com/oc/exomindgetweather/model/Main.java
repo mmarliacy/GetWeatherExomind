@@ -7,13 +7,14 @@ public class Main {
 
     @SerializedName("temp")
     @Expose
-    private Double temp;
+    private final Double temp;
 
-    public Main() {
+    /** CONSTRUCTOR */
+    public Main(Double pTemp) {
+        temp = pTemp;
     }
 
     public Double getTemp() {
         return temp;
     }
-
 }

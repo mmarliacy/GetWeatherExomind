@@ -7,31 +7,20 @@ public class Weather {
 
     @SerializedName("id")
     @Expose
-    private Integer id;
-    @SerializedName("main")
-    @Expose
-    private String main;
-    @SerializedName("description")
-    @Expose
-    private String description;
+    private final Integer id;
+
     @SerializedName("icon")
     @Expose
-    private String icon;
+    private final String icon;
 
-
-    public Weather() {
+    /** CONSTRUCTOR */
+    public Weather(Integer pId, String pIcon) {
+        id = pId;
+        icon = pIcon;
     }
 
     public Integer getId() {
         return id;
-    }
-
-    public String getMain() {
-        return main;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public String getIcon() {

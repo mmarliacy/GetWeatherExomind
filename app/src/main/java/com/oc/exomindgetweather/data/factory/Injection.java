@@ -1,9 +1,6 @@
 package com.oc.exomindgetweather.data.factory;
 
-import android.content.Context;
-
 import com.oc.exomindgetweather.data.repositories.WeatherRepository;
-
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -17,7 +14,7 @@ public class Injection {
         return Executors.newSingleThreadExecutor();
     }
 
-    //-- Returns ViewModelFactory's objects --
+    //-- Returns ViewModelFactory object -->
     public static WeatherFactory provideViewModelFactory() {
         WeatherRepository weatherDataSource = provideWeatherDataSource();
         Executor executor = provideExecutor();

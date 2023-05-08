@@ -9,18 +9,21 @@ public class CurrentWeather {
 
     @SerializedName("weather")
     @Expose
-    private ArrayList<Weather> weather;
+    private final ArrayList<Weather> weather;
 
     @SerializedName("main")
     @Expose
-    private Main main;
+    private final Main main;
 
     @SerializedName("name")
     @Expose
-    private String name;
+    private final String name;
 
-
-    public CurrentWeather() {
+    /** CONSTRUCTOR */
+    public CurrentWeather(ArrayList<Weather> pWeather, Main pMain, String pName) {
+        weather = pWeather;
+        main = pMain;
+        name = pName;
     }
 
     public Main getMain() {
